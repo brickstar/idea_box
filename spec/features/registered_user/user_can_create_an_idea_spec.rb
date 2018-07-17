@@ -22,6 +22,7 @@ describe 'registered user' do
 
       expect(current_path).to eq(user_path(user))
 
+      expect(page).to have_content('Idea Saved!')
       expect(page).to have_content('idea title')
       expect(page).to have_content('my amazing idea')
     end

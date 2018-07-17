@@ -1,5 +1,6 @@
 <p>Welcome, <%= @user.username %>!</p>
 <% @user.ideas.each do |idea| %>
+  <p id='idea-<%= idea.id %>'><%= link_to 'change this idea', edit_user_idea_path(@user)%></p>
   <p>Title: <%= idea.title %></p>
   <p>Description: <%= idea.description %></p>
   <% idea.images.each do |image| %>
