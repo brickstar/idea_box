@@ -8,5 +8,7 @@ Rails.application.routes.draw do
     resources :categories, only: [:index]
   end
 
-  resources :users, only: [:index, :new, :create, :show]
+  resources :users, only: [:index, :new, :create, :show], shallow: true do
+    resources :ideas, only: [:new, :create]
+  end
 end

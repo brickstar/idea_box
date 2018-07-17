@@ -1,9 +1,10 @@
 <p>Welcome, <%= @user.username %>!</p>
 <% @user.ideas.each do |idea| %>
-<p>Title: <%= idea.title %></p>
-<p>Description: <%= idea.description %></p>
-<p><% idea.images.each do |image| %></p>
-<%= image_tag image.url %>
-<% end %>
+  <p>Title: <%= idea.title %></p>
+  <p>Description: <%= idea.description %></p>
+  <% idea.images.each do |image| %>
+    <%= image_tag image.url %>
+  <% end %>
 <% end %>
 <%= link_to 'Logout', logout_path %>
+<%= link_to 'I have an idea!', new_user_idea_path(@user) %>
