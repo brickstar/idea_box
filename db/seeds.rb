@@ -10,7 +10,11 @@ user  = User.create(username: 'Heidi', password: 'love', role: 0)
 CATEGORIES = ["Red", "Orange", "Green", "Yellow", "Blue", "Indigo", "Violet", "Pink"]
 IDEAS = ["Peace", "Love", "Understanding", "Haromony", "Music", "Friendship", "Family", "Community"]
 DESCRIPTION = ["Perfect Idea", "Wonderfull Idea", "Clever Idea", "Meaningful Idea", "Productive Idea", "Unique Idea", "First Idea", "Last Idea", "Beginning Idea", "Interesting Idea", "Smart Idea", "Genius Idea", "What an Idea!"]
-URLS = ['https://robohash.org/1', 'https://robohash.org/a', 'https://robohash.org/b', 'https://robohash.org/e', 'https://robohash.org/c', 'https://robohash.org/d', 'https://robohash.org/f']
+URLS = ['https://robohash.org/a', 'https://robohash.org/b', 'https://robohash.org/c', 'https://robohash.org/d',
+        'https://robohash.org/e', 'https://robohash.org/f', 'https://robohash.org/g', 'https://robohash.org/h',
+        'https://robohash.org/i', 'https://robohash.org/j', 'https://robohash.org/k', 'https://robohash.org/l',
+        'https://robohash.org/m', 'https://robohash.org/n', 'https://robohash.org/o', 'https://robohash.org/p',
+        'https://robohash.org/q', 'https://robohash.org/r', 'https://robohash.org/s', 'https://robohash.org/t']
 
 
 CATEGORIES.each do |title|
