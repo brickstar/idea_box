@@ -11,6 +11,10 @@ CATEGORIES.each do |title|
   puts "Created #{category.title}"
   10.times do |num|
     category.ideas.create!(title: IDEAS.sample, description: DESCRIPTION.sample)
+    Image.create(url: 'www.example.com', title: 'image')
     puts "Created #{category.ideas[num].title}"
   end
 end
+
+User.create(username: 'Pearl', password: 'love')
+User.create(username: 'Heidi', password: 'love')
