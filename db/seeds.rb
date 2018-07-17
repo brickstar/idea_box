@@ -1,5 +1,7 @@
 Category.destroy_all
 Idea.destroy_all
+Image.destroy_all
+User.destroy_all
 
 CATEGORIES = ["Red", "Orange", "Green", "Yellow", "Blue", "Indigo", "Violet", "Pink"]
 IDEAS = ["Peace", "Love", "Understanding", "Haromony", "Music", "Friendship", "Family", "Community"]
