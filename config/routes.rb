@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get  'logout', to: 'sessions#destroy'
 
+  namespace :admin do
+    resources :categories, only: [:index]
+  end
 
   resources :users, only: [:index, :new, :create, :show]
 end
