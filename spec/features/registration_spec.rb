@@ -20,7 +20,6 @@ describe 'registration workflow' do
   end
 
   it 'submits a registration form with duplicate username' do
-    skip
     username = 'Pearl'
     User.create!(username: username, password: 'sosecret')
     count = User.count
@@ -36,7 +35,7 @@ describe 'registration workflow' do
 
     click_on 'Create User'
 
-    expect(current_path).to eq(users_path)
+    expect(current_path).to eq(new_user_path)
     expect(User.count). to eq(count)
   end
 end
