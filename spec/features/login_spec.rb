@@ -32,7 +32,6 @@ describe 'login workflow' do
     fill_in :password, with: user.password
 
     click_on 'Login'
-
     click_on 'Logout'
 
     expect(current_path).to eq(root_path)
