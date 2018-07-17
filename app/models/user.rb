@@ -2,7 +2,7 @@ class User < ApplicationRecord
   validates :username, uniqueness: true, presence: true
   validates_presence_of :password, require: true
 
-  has_many :ideas
+  has_many :ideas, dependent: :destroy
 
   has_secure_password
 end
