@@ -4,5 +4,7 @@ class User < ApplicationRecord
 
   has_many :ideas, dependent: :destroy
 
+  enum role: ['default', 'admin']
+
   has_secure_password
 end
