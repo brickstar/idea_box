@@ -35,6 +35,6 @@ CATEGORIES.each do |title|
   idea.images.create!(url: IMAGEURLS.sample, title: CATEGORIES.sample)
 end
 
-12.times do
+40.times do
   Image.create(url: IMAGEURLS.sample, title: CATEGORIES.sample)
 end
