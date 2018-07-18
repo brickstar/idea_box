@@ -1,0 +1,8 @@
+<h1>Choose an Image!</h1>
+<% if current_admin? %>
+  <%= link_to 'create a new image' %>
+<% end %>
+<% @images.each do |image| %>
+  <%= image.title %>
+  <%= image_tag image.url %>
+<% end %>

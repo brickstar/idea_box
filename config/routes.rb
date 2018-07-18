@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :categories, only: [:index]
   end
 
+  resources :images, only: [:index]
+
   resources :users, only: [:index, :new, :create, :show] do
     resources :ideas, only: [:new, :create, :update, :edit]
   end
