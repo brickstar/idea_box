@@ -1,2 +1,11 @@
 <p>Welcome, <%= @user.username %>!</p>
 <%= link_to 'Logout', logout_path %>
+<%= link_to 'I have an idea!', new_user_idea_path(@user) %>
+<% @user.ideas.each do |idea| %>
+  <p id='idea-<%= idea.id %>'><%= link_to 'change this idea', edit_user_idea_path(@user)%></p>
+  <p>Title: <%= idea.title %></p>
+  <p>Description: <%= idea.description %></p>
+  <% idea.images.each do |image| %>
+    <p><%= image_tag(image.url, class: "img-responsive") %></p>
+  <% end %>
+<% end %>
