@@ -1,0 +1,25 @@
+@import 'shared_values';
+
+.parallax {
+  background-image: image-url('pianokeys.png');
+
+  height: 900px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stuff {
+  background-color: red;
+}
+
+#parallax-heading {
+  font-family: $primary-font;
+  color: white;
+  font-size: 4em;
+  text-align: center;
+  line-height: 1000px;
+  margin: 0;
+}
