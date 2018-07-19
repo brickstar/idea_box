@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light primary-bg">
+<i class="fas fa-crow"></i>
+<%= link_to 'Idea Box', root_path, id: 'logo', class: 'navbar-brand'%>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <%= link_to 'Images', images_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Logout', logout_path, class: "nav-link", id: 'logout-link' %>
+      </li>
+      <% if current_admin? %>
+      <li class="nav-item">
+        <%= link_to 'Categories', admin_categories_path, class: "nav-link" %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

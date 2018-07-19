@@ -1,12 +1,17 @@
 class IdeasController < ApplicationController
+  before_action :set_idea, only: [:show, :edit, :update, :destroy]
+  before_action :set_user
+
   def new
     @categories = Category.all
-    @user = User.find(params[:user_id])
     @idea = Idea.new
   end
 
+  def show
+    render file: '/public/404.html'
+  end
+
   def create
-    @user = User.find(params[:user_id])
     @idea = @user.ideas.new(idea_params)
     if @idea.save
       flash[:success] = 'Idea Saved!'
@@ -19,14 +24,13 @@ class IdeasController < ApplicationController
 
   def edit
     @categories = Category.all
-    @user = User.find(params[:user_id])
-    @idea = Idea.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:user_id])
-    @idea = Idea.find(params[:id])
-    if @idea.update(idea_params)
+    if params[:image_id]
+      @idea.images << Image.find(params[:image_id])
+      redirect_to user_path(current_user)
+    elsif @idea.update(idea_params)
       flash[:success] = 'Idea Updated!'
       redirect_to user_path(@user)
     else
@@ -35,9 +39,21 @@ class IdeasController < ApplicationController
     end
   end
 
+  def destroy
+
+  end
+
   private
 
   def idea_params
-   params.require(:idea).permit(:title, :description, :category_id)
+   params.require(:idea).permit(:title, :description, :category_id, :image_id)
+  end
+
+  def set_user
+    @user = User.find(params[:user_id])
+  end
+
+  def set_idea
+    @idea = Idea.find(params[:id])
   end
 end

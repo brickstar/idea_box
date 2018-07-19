@@ -3,12 +3,16 @@ require 'rails_helper'
 describe 'user visits categories index' do
   describe 'as admin' do
     it 'should see all categories' do
+      category1 = Category.create(title: 'Green')
+      category2 = Category.create(title: 'Blue')
       admin = User.create(username: 'pearl', password: 'love', role: 1)
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
       visit admin_categories_path
       expect(page).to have_content("Admin Categories")
+      expect(page).to have_content(category1.title)
+      expect(page).to have_content(category2.title)
     end
   end
 
