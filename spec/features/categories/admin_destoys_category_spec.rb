@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'admin visits admin categories index' do
-  it 'should be able to destroy a category' do
+  xit 'should be able to destroy a category' do
     category = Category.create(title: 'Green')
     admin = User.create(username: 'heidi', password: 'love', role: 1)
 

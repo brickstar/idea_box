@@ -7,9 +7,8 @@ describe 'registered user' do
       user = User.create(username: 'heidi', password: 'love', role: 0)
       idea1 = user.ideas.create!(title: 'title', description: 'my amazing idea', category: category)
       idea2 = user.ideas.create!(title: 'title 2', description: 'other idea', category: category)
-      image1 = Image.create(title: 'Red', url: 'https://robohash.com/1')
-      image2 = Image.create(title: 'Red', url: 'https://robohash.com/2')
-
+      image1 = Image.create(title: 'Red', url: 'https://robohash.org/1')
+      image2 = Image.create(title: 'Green', url: 'https://robohash.org/2')
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit user_path(user)

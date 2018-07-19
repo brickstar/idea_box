@@ -27,7 +27,10 @@ class IdeasController < ApplicationController
   end
 
   def update
-    if @idea.update(idea_params)
+    if params[:image_id]
+      @idea.images << Image.find(params[:image_id])
+      redirect_to user_path(current_user)
+    elsif @idea.update(idea_params)
       flash[:success] = 'Idea Updated!'
       redirect_to user_path(@user)
     else
@@ -43,7 +46,7 @@ class IdeasController < ApplicationController
   private
 
   def idea_params
-   params.require(:idea).permit(:title, :description, :category_id)
+   params.require(:idea).permit(:title, :description, :category_id, :image_id)
   end
 
   def set_user
