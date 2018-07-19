@@ -105,6 +105,14 @@ h1 {
   padding: 4em;
 }
 
+.edit_idea {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 4em;
+}
+
 .login-form {
   padding: 4em;
 }
@@ -116,6 +124,11 @@ h1 {
 
 .category-titles{
   margin: 1em;
+}
+
+#add-new-image-link {
+  margin-left: 1em;
+  font-size: 1.2em;
 }
 
 #create-category-link {
