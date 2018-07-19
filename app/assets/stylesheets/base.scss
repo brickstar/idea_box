@@ -3,6 +3,11 @@
 body {
   font-family: $primary-font;
   background-image: url("white-brick.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   position: relative;
   margin: 0;
   padding-bottom: 6rem;
@@ -36,6 +41,7 @@ main {
 }
 
 h1 {
+  margin-left: .4em;
   font-family: $logo-font;
   padding-top: 3%;
   border-bottom: 1px dotted #1F7F61;
@@ -103,6 +109,19 @@ h1 {
   padding: 4em;
 }
 
+.categories-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-titles{
+  margin: 1em;
+}
+
+#create-category-link {
+  margin-left: 1em;
+}
+
 #category-label {
   margin-top: 3px;
 }
@@ -148,9 +167,12 @@ h1 {
 }
 
 #idea-button {
+  font-size: 1.2em;
+  margin-left: .4em;
   display: flex;
   color: rgb(96, 99, 124);
 }
+
 #category-delete {
   // visibility: hidden;
   font-size: 0;

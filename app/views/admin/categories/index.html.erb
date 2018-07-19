@@ -1,8 +1,13 @@
 <h1>Admin Categories</h1>
-<%= link_to 'Create New Category', new_admin_category_path %>
+<div id="create-category-link">
+  <%= link_to 'Create New Category', new_admin_category_path %>
+</div>
+<div class="categories-box">
 <% @categories.each do |category| %>
-  <%= category.title %>
-  <%= link_to admin_category_path(category), method: "delete", data: {confirm: "Are you sure? This will also delete all associated ideas!"} do %>
-  <i class="far fa-trash-alt"><span class="hidden"></span></i>
-  <% end %>
+  <div class='category-titles'><%= category.title %>
+    <%= link_to admin_category_path(category), method: "delete", data: {confirm: "Are you sure? This will also delete all associated ideas!"} do %>
+    <i class="far fa-trash-alt"><span class="hidden"></span></i>
+    <% end %>
+  </div>
 <% end %>
+</div>
