@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   get  'logout', to: 'sessions#destroy'
 
   namespace :admin do
-    resources :categories, only: [:index]
+    resources :categories
   end
+
+  resources :categories, only: [:index]
 
   resources :images, only: [:index]
 

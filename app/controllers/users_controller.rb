@@ -15,7 +15,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    if User.where(id: params[:id]).empty? || User.find(params[:id]) != current_user
+      render file: 'public/404.html'
+    else
+      @user = User.find(params[:id])
+    end
   end
 
   private

@@ -1,0 +1,4 @@
+<%= link_to  'Create Idea', new_user_idea_path(@user) %>
+<% @ideas.each do |idea| %>
+ <%= link_to idea.title, user_idea_path(@user, idea) %>
+<%end%>
