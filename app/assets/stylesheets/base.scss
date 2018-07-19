@@ -2,6 +2,7 @@
 
 body {
   font-family: $primary-font;
+  background-image: url("white-brick.png");
   position: relative;
   margin: 0;
   padding-bottom: 6rem;
@@ -65,6 +66,91 @@ h1 {
   color: rgba(#ff5400, 0.64);
 }
 
+.user-ideas-box {
+  background-image: url("white-brick.png");
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-ideas {
+  border: .5px dotted;
+  border-radius: 1em;
+  margin: 1em;
+}
+
+.user-card-button {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-new-background {
+  height: 50em;
+  background-image: url("white-brick.png")
+}
+
+.new_idea {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 4em;
+}
+
+.login-form {
+  padding: 4em;
+}
+
+#category-label {
+  margin-top: 3px;
+}
+
+#category-label {
+  margin-top: 3px;
+}
+
+#create-idea {
+  margin-top: 1em;
+}
+
+#idea-title {
+  color: #193840;
+}
+
+#image-title {
+  color: #343140;
+}
+
+#descrip {
+  color: #15222a;
+}
+
+#card-image {
+  display: flex;
+  justify-content: center;
+}
+
+#add-image {
+  color: #2b6973;
+}
+
+#change-idea {
+  color: #f57af7;
+  border-radius: 15px;
+  margin-top: 1em;
+}
+
+#idea-image {
+  height: 4em;
+  width: 4em;
+}
+
+#idea-button {
+  display: flex;
+  color: rgb(96, 99, 124);
+}
 #category-delete {
   // visibility: hidden;
   font-size: 0;
