@@ -24,7 +24,7 @@ describe 'user visits images index' do
       image2 = Image.create!(title: 'green', url: 'https://robohash.org/2')
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-
+      
       visit images_path
 
       expect(page).to_not have_content('create a new image')

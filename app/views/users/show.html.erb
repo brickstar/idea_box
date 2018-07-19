@@ -1,5 +1,9 @@
 <p>Welcome, <%= @user.username %>!</p>
+<% if @user.ideas.empty? %>
 <%= link_to 'I have an idea!', new_user_idea_path(@user) %>
+<% else %>
+<%= link_to 'I have another idea!', new_user_idea_path(@user) %>
+<% end %>
 <% @user.ideas.each do |idea| %>
 <div id='idea-<%= idea.id %>'>
   <p><%= link_to 'change this idea', edit_user_idea_path(@user, idea)%></p>

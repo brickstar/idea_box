@@ -6,11 +6,11 @@
 <div id="image-<%= image.id %>">
   <%= image.title %>
   <%= image_tag image.url %>
-
+<% if @idea %>
   <%= form_tag user_idea_path(current_user, @idea), method: 'patch' do %>
-  <%= hidden_field_tag :image_id, image.id %>\
+  <%= hidden_field_tag :image_id, image.id %>
   <%= submit_tag "Add Image" %>
   <% end %>
-
+<% end %>
 </div>
 <% end %>
