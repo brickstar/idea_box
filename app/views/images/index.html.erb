@@ -3,6 +3,8 @@
   <%= link_to 'create a new image' %>
 <% end %>
 <% @images.each do |image| %>
+<div id="image-<%= image.id %>">
   <%= image.title %>
   <%= image_tag image.url %>
+</div>
 <% end %>

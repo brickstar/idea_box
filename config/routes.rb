@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :images, only: [:index]
 
   resources :users, only: [:index, :new, :create, :show] do
-    resources :ideas, only: [:new, :create, :update, :edit]
+    resources :ideas, only: [:new, :create, :update, :edit] do
+      resources :images, only: [:index]
+    end
   end
 end
