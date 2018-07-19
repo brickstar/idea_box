@@ -2,7 +2,7 @@
 
 body {
   font-family: $primary-font;
-  background-image: url("white-brick.png");
+  background-image: url(<%= asset_path("white-brick.png") %>);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -73,7 +73,7 @@ h1 {
 }
 
 .user-ideas-box {
-  background-image: url("white-brick.png");
+  background-image: url(<%= asset_path("white-brick.png") %>);
   display: flex;
   flex-wrap: wrap;
 }
@@ -94,7 +94,7 @@ h1 {
 
 .user-new-background {
   height: 50em;
-  background-image: url("white-brick.png")
+  background-image: url(<%= asset_path("white-brick.png") %>);
 }
 
 .new_idea {
