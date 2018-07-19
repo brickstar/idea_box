@@ -1,0 +1,13 @@
+<%= form_for [@user, @idea] do |f| %>
+
+<%= f.label :title, id: 'category-label' %>
+<%= f.text_field :title %>
+
+<%= f.label :description, id: 'category-label' %>
+<%= f.text_area :description %>
+
+<%= f.label :category, id: 'category-label' %>
+<%= f.collection_select :category_id, @categories, :id, :title %>
+
+<%= f.submit id: 'create-idea' %>
+<% end %>

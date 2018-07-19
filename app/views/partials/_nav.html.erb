@@ -6,9 +6,18 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
+      <% if current_user.nil? %>
       <li class="nav-item">
-        <%= link_to 'Images', images_path, class: "nav-link" %>
+        <%= link_to 'Sign Up!', new_user_path, class: 'nav-link' %>
       </li>
+      <li class="nav-item">
+        <%= link_to "I already have an account", login_path, class: 'nav-link' %>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to 'Go to My Ideas', user_path(current_user), class: 'nav-link' %>
+      </li>
+      <% end %>
       <li class="nav-item">
         <%= link_to 'Logout', logout_path, class: "nav-link", id: 'logout-link' %>
       </li>

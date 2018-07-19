@@ -1,18 +1,23 @@
-<p>Welcome, <%= @user.username %>!</p>
+<h1>Welcome, <%= @user.username %>!</h1>
 <% if @user.ideas.empty? %>
-<%= link_to 'I have an idea!', new_user_idea_path(@user) %>
+  <%= link_to 'I have an idea!', new_user_idea_path(@user), class: 'btn-lg' %>
 <% else %>
-<%= link_to 'I have another idea!', new_user_idea_path(@user) %>
+  <%= link_to 'I have another idea!', new_user_idea_path(@user), class: 'btn btn-sm', id: 'idea-button' %>
 <% end %>
-<% @user.ideas.each do |idea| %>
-<div id='idea-<%= idea.id %>'>
-  <p><%= link_to 'change this idea', edit_user_idea_path(@user, idea)%></p>
-  <p><%= link_to 'Add an Image', user_idea_images_path(@user, idea)%></p>
-  <p>Title: <%= idea.title %></p>
-  <p>Description: <%= idea.description %></p>
-  <% idea.images.each do |image| %>
-    <p><%= image.title %></p>
-    <p><%= image_tag(image.url, class: "img-responsive") %></p>
+<div class="user-ideas-box">
+  <% @user.ideas.each do |idea| %>
+    <div class='user-ideas' 'id='idea-<%= idea.id %>'>
+      <div class="user-card-button">
+
+      <p class="btn btn-sm"><%= link_to 'change this idea', edit_user_idea_path(@user, idea), id: 'change-idea' %></p>
+      <p class='btn btn-sm'><%= link_to 'Add an Image', user_idea_images_path(@user, idea), id: 'add-image' %></p>
+      <p id="idea-title"><%= idea.title %></p>
+      <p id='descrip'><%= idea.description %></p>
+      <% idea.images.each do |image| %>
+        <p class="card-img-bottom" id='card-image'><%= image_tag(image.url, id: 'idea-image') %></p>
+        <p id='image-title'><%= image.title %></p>
+      <% end %>
+    </div>
+    </div>
   <% end %>
 </div>
-<% end %>

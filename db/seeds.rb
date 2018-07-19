@@ -15,7 +15,7 @@ CATEGORIES  = ["Red", "Orange", "Green", "Yellow", "Blue", "Indigo", "Violet",
               "Pink", "Black", "Brown", "Olive", "Pear", "Pearl", "Aero", "Aero Blue",
               "Almond", "Aqua", "Amber", "Gold", "Silver", "Peach", "Teal"]
 
-TITLES      = ["Peace", "Love", "Understanding", "Haromony", "Music", "Friendship", "Family", "Community"]
+TITLES      = ["Peace", "Love", "Understanding", "Harmony", "Music", "Friendship", "Family", "Community"]
 
 DESCRIPTION = ["Perfect Idea", "Wonderfull Idea", "Clever Idea", "Meaningful Idea",
                "Productive Idea", "Unique Idea", "First Idea", "Last Idea", "Beginning Idea",

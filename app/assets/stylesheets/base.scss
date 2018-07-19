@@ -2,6 +2,12 @@
 
 body {
   font-family: $primary-font;
+  background-image: url("white-brick.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   position: relative;
   margin: 0;
   padding-bottom: 6rem;
@@ -35,6 +41,7 @@ main {
 }
 
 h1 {
+  margin-left: .4em;
   font-family: $logo-font;
   padding-top: 3%;
   border-bottom: 1px dotted #1F7F61;
@@ -63,6 +70,120 @@ h1 {
 
 .fa-trash-alt:hover {
   color: rgba(#ff5400, 0.64);
+}
+
+.user-ideas-box {
+  background-image: url("white-brick.png");
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-ideas {
+  border: .5px dotted;
+  border-radius: 1em;
+  margin: 1em;
+}
+
+.user-card-button {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-new-background {
+  height: 50em;
+  background-image: url("white-brick.png")
+}
+
+.new_idea {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 4em;
+}
+
+.edit_idea {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 4em;
+}
+
+.login-form {
+  padding: 4em;
+}
+
+.categories-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-titles{
+  margin: 1em;
+}
+
+#add-new-image-link {
+  margin-left: 1em;
+  font-size: 1.2em;
+}
+
+#create-category-link {
+  margin-left: 1em;
+}
+
+#category-label {
+  margin-top: 3px;
+}
+
+#category-label {
+  margin-top: 3px;
+}
+
+#create-idea {
+  margin-top: 1em;
+}
+
+#idea-title {
+  color: #193840;
+}
+
+#image-title {
+  color: #343140;
+}
+
+#descrip {
+  color: #15222a;
+}
+
+#card-image {
+  display: flex;
+  justify-content: center;
+}
+
+#add-image {
+  color: #2b6973;
+}
+
+#change-idea {
+  color: #f57af7;
+  border-radius: 15px;
+  margin-top: 1em;
+}
+
+#idea-image {
+  height: 4em;
+  width: 4em;
+}
+
+#idea-button {
+  font-size: 1.2em;
+  margin-left: .4em;
+  display: flex;
+  color: rgb(96, 99, 124);
 }
 
 #category-delete {
